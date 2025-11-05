@@ -23,6 +23,14 @@ services:
       - PORT=5103
       - FAIL_RATE=0.0
 
+  order_service:
+    build: ./services/1832375_order_service
+    ports: ["5104:5104"]
+    environment:
+      - SERVICE_NAME=order_service
+      - PORT=5104
+      - FAIL_RATE=0.0
+
   notification_service:
     build: ./services/2179652_notification_service
     ports: ["5107:5107"]
